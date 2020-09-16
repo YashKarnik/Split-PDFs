@@ -1,6 +1,6 @@
 # PDF splitter
 
-## Instructions to use
+## Instructions
 
 - Drop the pdf to be splitted in the `DROP` folder
 - Double Click on the `main.bat` file to run program
@@ -8,6 +8,6 @@
 
 ### Packages used
 
-- PyPDF2
-- time
-- glob
+- PyPDF2 (No need to install)
+- time (Inuilt)
+- glob (Inbuilt)
