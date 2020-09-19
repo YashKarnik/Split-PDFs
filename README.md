@@ -7,7 +7,8 @@
 - Splitted pdf files are in the `OUTPUT` folder
 
 ### Packages used
+#### Use `pip install <package_name>` for external packages
 
-- PyPDF2 (No need to install)
+- PyPDF2
 - time (Inuilt)
 - glob (Inbuilt)
