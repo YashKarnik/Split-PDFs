@@ -1,6 +1,18 @@
-import PyPDF2
 import glob
 import time
+import os
+try:
+    import PyPDF2
+except Exception as e:
+    inp = input("PyPDF2 module not found!!Do you want to install it? [y/n]: ")
+    if(inp == 'y' or inp == 'Y'):
+        os.system('pip install PyPDF2')
+        print("Module Insatlled!!")
+        time.sleep(0.5)
+    else:
+        print("Goodbye...")
+        time.sleep(1)
+        exit()
 
 
 def splitPDFS(pdfFile, Filename):
