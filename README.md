@@ -11,3 +11,4 @@
 - PyPDF2
 - time (Inuilt)
 - glob (Inbuilt)
+- os (Inbuilt)
