@@ -16,6 +16,10 @@ except Exception as e:
 
 
 def splitPDFS(pdfFile, Filename):
+    try:
+        os.mkdir(os.getcwd()+"/../OUTPUT")
+    except FileExistsError as e:
+        pass
     Filename = "../OUTPUT/{}_Page_No_".format(Filename)
     pdfFileObj = PyPDF2.PdfFileReader(open(pdfFile, "rb"))
     for i in range(pdfFileObj.numPages):
@@ -27,13 +31,14 @@ def splitPDFS(pdfFile, Filename):
     return"DONE!!!"
 
 
-if __name__ == "__main__":
+def main():
     PdfArray = glob.glob("../DROP/*pdf")
     print(len(PdfArray), "Files found")
     PdfDict = {chr(a+97): b for a, b in enumerate(PdfArray)}
     for i, j in PdfDict.items():
         print(i, ":", j.split("\\")[1])
     inp = input("Select the file you want to split:")
+
     while(PdfDict.get(inp) == None):
         inp = input("Please select a valid file you want to split:")
     print(splitPDFS(PdfDict[inp], PdfDict[inp].split(
@@ -41,3 +46,7 @@ if __name__ == "__main__":
     time.sleep(1)
     print("Goodbye..")
     time.sleep(2)
+
+
+if __name__ == "__main__":
+    main()
