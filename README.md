@@ -1,5 +1,7 @@
 # PDF splitter
 
+## Split a .pdf file and save each individual page as PDF
+
 ## Instructions
 
 - Drop the pdf to be splitted in the `DROP` folder
